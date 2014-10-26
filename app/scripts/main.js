@@ -7,6 +7,6 @@ $(function() {
 	});
 
 	$.ajaxChimp.translations.enCustom = {
-        1: 'Please enter your email'
+        1: 'Oops, you forgot to put your email up there.'
     };
 });
