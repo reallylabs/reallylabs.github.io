@@ -1,174 +1,174 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$base-space-unit:       1em !default;
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-$base-space-unit:       1em !default;
+// Font Icons
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?y6axu4');
+	src:url('fonts/icomoon.eot?#iefixy6axu4') format('embedded-opentype'),
+	url('fonts/icomoon.woff?y6axu4') format('woff'),
+	url('fonts/icomoon.ttf?y6axu4') format('truetype'),
+	url('fonts/icomoon.svg?y6axu4#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+	content: "\e600";
+}
+.icon-github:before {
+	content: "\e601";
+}
 
 html,
 body {
-  height: 100%;
-  color: #555;
-  font-family: 'Source Sans Pro', sans-serif;
+	height: 100%;
+	color: #555;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #2c3e50;
+	color: #2c3e50;
 }
 
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
+//
 // Landing Page Design
+//
 
 .full-image {
-  background-color: #ecf0f1;
-  background-image: url("/images/bg.jpg");
-  background-size: cover;
-  color: #fff;
+	background-color: #2C3944;
+	background-image: url("/images/bg.jpg");
+	background-size: cover;
+	color: #fff;
 }
 
 .full-image h2,
 .full-image h3 {
-  color: #fff;
+	color: #fff;
 }
 
 @media (min-width: 768px) {
-  .full-height {
-    height: 100%;
-  }
-  .centered {
-    display: table;
-  }
+	.full-height {
+		height: 100%;
+	}
+	.centered {
+		display: table;
+	}
 
-  .centered__inner {
-    display: table-cell;
-    vertical-align: middle;
-  }
+	.centered__inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
 }
 
 .full-image .form-control {
-  border: 0;
-  border-radius: 0;
+	border: 0;
+	border-radius: 0;
 }
 
 .features li {
-  margin-bottom: 2em;
+	margin-bottom: 2em;
 }
 
 .logo {
-  width: 200px;
+	width: 200px;
 }
 
 .media-icon {
-  width: 50px;
+	width: 50px;
 }
 
-// button
+//
+// Social Icons
+
+.social-icons a:hover {
+	text-decoration: none;
+}
+
+[class^="icon-"] {
+	color: #fff;
+	font-size: 2em;
+
+	&:hover {
+		color: #f16001;
+	}
+}
+
+//
+// Overide Bootstrap Classes
+
+.media > .pull-left {
+	margin-right: 25px;
+}
+
+code {
+	background-color: transparent;
+	border-radius: 0;
+	color: #333;
+}
+
+//
+// Button Success
 
 .btn-success {
-  background-color: #f16001;
-  border-color: #f16001;
+	background-color: #f16001;
+	border-color: #f16001;
 }
 
 .btn-success:hover,
 .btn-success:active,
 .btn-success:focus {
-  background-color: #f16001;
-  border-color: #f16001;
-  opacity: .9;
+	background-color: #f16001;
+	border-color: #f16001;
+	opacity: .9;
 }
 
-// Overide media object
+//
+// Signup form alerts
 
-.media > .pull-left {
-  margin-right: 25px;
+.mc-label {
+	font-size: 13px;
+	font-weight: 400;
+	padding-top: 6px;
 }
 
-code {
-  background-color: transparent;
-  border-radius: 0;
-  color: #333;
+.mc-label.valid {
+	font-weight: 400;
+	font-size: 16px;
+	color: #5cb85c;
 }
+
+.mc-label.error {
+	font-weight: 400;
+	font-size: 16px;
+	color: #e74c3c;
+}
+
+// Some helper classes for margin and padding
 
 @function quarter($value)   { @return $value / 4; }
 @function halve($value)     { @return $value / 2; }
@@ -177,8 +177,6 @@ code {
 @function double($value)    { @return $value * 2; }
 @function threefold($value) { @return $value * 3; }
 @function quadruple($value) { @return $value * 4; }
-
-.margin-top-none { margin-top: 0; }
 
 //
 // Padding
@@ -241,3 +239,11 @@ code {
 .padding-two            { padding: double($base-space-unit); }
 .padding-three          { padding: threefold($base-space-unit); }
 .padding-four           { padding: quadruple($base-space-unit); }
+
+
+//
+// Margin
+//
+
+.margin-bottom-one      { margin-bottom: 1em; }
+.margin-top-none { margin-top: 0; }
