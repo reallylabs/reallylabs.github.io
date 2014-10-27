@@ -333,11 +333,11 @@ module.exports = function (grunt) {
           src: '<%= config.app %>/CNAME',
           dest: '<%= config.dist %>/CNAME'
         }, {
-          expand: true,
-          dot: true,
-          cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-          dest: '<%= config.dist %>'
+          // expand: true,
+          // dot: true,
+          // cwd: '.',
+          // src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          // dest: '<%= config.dist %>'
         }]
       },
       styles: {
@@ -381,6 +381,27 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:ahmadajmi/reallylabs.github.io.git',
+          branch: 'master'
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
+        }
+      }
     }
   });
 
